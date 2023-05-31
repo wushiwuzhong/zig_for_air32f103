@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "OpenOcd",
+            "servertype": "openocd",
+            "executable": "zig-out\\bin\\zig-stm32-blink.elf",
+            "runToMain": true,
+            "showDevDebugOutput": "raw",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32f1x.cfg"
+            ],
+            "svdFile": "AIR32F103xx.svd"
+        }
+    ]
+}
